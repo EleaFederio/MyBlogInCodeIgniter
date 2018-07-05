@@ -9,6 +9,7 @@
 class Blog extends CI_Controller
 {
     function index(){
+        $this->valid_user();
         $data['title'] = 'Blog';
         $this->load->model('notes_model');
         $data['fetched_notes'] = $this->notes_model->getNotes();
@@ -64,5 +65,11 @@ class Blog extends CI_Controller
       $this->load->model('notes_model');
       $data['post'] = $this->notes_model->updateBlog($id);
       redirect('blog');
+    }
+
+    function valid_user(){
+      if($this->session->userdata('username') == ""){
+        redirect(base_url().'authentication');
+      }
     }
 }

@@ -15,7 +15,16 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="<?=base_url()?>main.css">
         <title>AA</title>
+        <style>
+        #toast-container {
+          min-width: 10%;
+          top: 25%;
+          right: 50%;
+          transform: translateX(50%) translateY(50%);
+        }
+        </style>
     </head>
     <body>
         <nav>
@@ -25,6 +34,7 @@
                     <li><a href="<?php echo base_url()?>">Home</a></li>
                     <li><a href="<?php echo base_url()?>about">About</a></li>
                     <li><a href="<?php echo base_url()?>blog">Blog</a></li>
+                    <li><a href="<?php echo base_url()?>pages/logout">Logout</a></li>
                 </ul>
             </div>
         </nav>
